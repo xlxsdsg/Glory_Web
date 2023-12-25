@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.Glory.dao.CommentDao">
+    <select id="findCommentByPostId" resultType="com.Glory.po.Comment" parameterType="Integer">
+        select * from comment where postId = #{postId}
+	</select>
+    <insert id="sendComment" parameterType="com.Glory.po.Comment">
+        insert into comment (postId, userId, username, content, time, exist)
+            values (#{postId}, #{userId}, #{username}, #{content}, #{time}, 1)
+    </insert>
+    <update id="deleteCommentByPostId" parameterType="Integer">
+        update comment
+        set
+            exist = 0
+        WHERE postId = #{postId}
+    </update>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.Glory.dao.UserDao">
+    <select id="findUserByEmail" resultType="com.Glory.po.User" parameterType="String">
+        select * from userdata where email = #{email}
+	</select>
+    <insert id="register" parameterType="com.Glory.po.User">
+        insert into userdata (username, identity, status, password, email, signature, frostTime, gender)
+            values (#{username}, 1, 1, #{password}, #{email}, '这个人很懒，什么都没写..', #{frostTime}, '未知')
+    </insert>
+    <update id="userEdit" parameterType="com.Glory.po.User">
+        UPDATE userdata
+        SET username = #{username},
+            gender = #{gender},
+            signature = #{signature}
+        WHERE userid = #{userid}
+    </update>
+</mapper>

@@ -1,0 +1,188 @@
+:root{
+    --font-main-color:black;
+    --font-hover-color:red;
+    --font-btn-color:#ffffff;
+    --background-btn-color:red;
+    --background-color:rgba(252, 252, 252, 0.444);
+    --shadow-color:rgba(0,0,0,0.1);
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    /*标签控制*/
+    a{
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+    /*标签控制结束*/
+     
+    /*头部<header>开始*/
+    header{
+        margin: 0;
+        padding: 0;
+        width:100%;
+    }
+    header .box-logo{
+        width: 100%;
+        display: flex;
+        /*背景颜色*/
+        background-color:#f0ffff;
+        /*阴影*/
+        box-shadow: 1px 1px 1px 1px var(--shadow-color);
+    }
+    header .logo{
+        margin: 0;
+        padding:0.25em 1em;
+        height: 100%;
+        font-size: 1.5em;
+        /*设置字体颜色*/
+        color:var(--font-main-color);
+     
+    }
+    header .logo .img-logo-box{
+        /*LOGO和文字在一行*/
+        display: inline-block;
+        /*LOGO和文字上下居中，实现对齐*/
+        vertical-align:middle;
+    }
+    header nav{
+        /*为了让它右边的元素靠右*/
+        flex: 1;
+        padding-left: 1em;
+        /*因为父元素是flex，所以使用margin:auto可以实现内容垂直居中*/
+        margin: auto;
+        font-size: 1.3em;
+    }
+    header nav ul{
+        display: block;
+        margin: auto;
+        vertical-align: middle;
+    }
+    header nav ul li{
+        margin: auto 0.25em;
+        /*让li标签横向排列*/
+        display: inline-block;
+    }
+    header nav ul li a{
+        /*设置字体颜色*/
+        color:var(--font-main-color);
+    }
+    header nav ul li:hover a{
+        color:var(--font-hover-color);
+        text-decoration: var(--font-main-color) 1px;
+    }
+    header .header-info{
+        display: contents;
+        margin: auto;
+        padding-right: 1.5em;
+    }
+    header .header-info .btn-login p{
+        color:var(--font-main-color); 
+    }
+    header .header-info a{
+        margin: auto 0.5em;
+    }
+     
+    header .header-info .btn-login{
+        margin: auto 1em;
+        /*因为父元素设置了display:contents，所以这里就用设置display:inline-block;*/
+        /*display: inline-block;*/
+        color:var(--font-btn-color);
+        background-color: var(--background-btn-color);
+        border-radius: 5px;
+    }
+     .after-login{
+         margin: auto 1em;
+         /*因为父元素设置了display:contents，所以这里就用设置display:inline-block;*/
+         /*display: inline-block;*/
+         font-size: 30px;
+         background: linear-gradient(to right, red, blue);
+         -webkit-background-clip: text;
+         color: transparent;
+         border-radius: 5px;
+     }
+    /*默认*/
+    @media (min-width: 767px){
+        header .logo .img-logo{
+            height: 1.5em;
+            width: 1.5em;
+        }
+        header .logo .text-logo{
+            font-size: 1.3em;
+        }
+        header .header-info .sm-show
+        {
+            display: none;
+        }
+        header .header-info a img{
+            width: 1.5em;
+        }
+        header .header-info .btn-login a{
+            font-size: 1.25em;
+        }
+    }
+    /* 横向放置的手机和竖向放置的平板之间的分辨率 */
+    @media (max-width: 767px) {
+        header .logo{
+            /*nav不显示时，靠logo将最右边的元素挤到最右*/
+            flex:1;
+        }
+        header .logo .img-logo{
+            height: 1.2em;
+            width: 1.2em;
+        }
+        header .logo .text-logo{
+            font-size: 1em;
+        }
+        header nav{
+            display: none;
+        }
+        header .header-info a img{
+            width: 1.2em;
+        }
+        header .header-info .btn-login a{
+            font-size: 1em;
+        }
+    }
+    /* 横向放置的手机及分辨率更小的设备 */
+    @media (max-width: 480px) {
+        header .logo{
+            /*nav不显示时，靠logo将最右边的元素挤到最右*/
+            flex:1;
+        }
+        header .logo .img-logo{
+            height: 1em;
+            width: 1em;
+        }
+        header .logo .text-logo{
+            font-size: 0.8em;
+            display: none;
+        }
+        header nav{
+            display: none;
+        }
+        header nav{
+            display: none;
+        }
+        header .header-info a img{
+            width: 1em;
+        }
+        header .header-info .btn-login a{
+            font-size: 1em;
+        }
+    }
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

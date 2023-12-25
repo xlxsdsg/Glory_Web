@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.Glory.dao.AnnouncementDao">
+    <select id="findAllAnnouncement" resultType="com.Glory.po.Announcement">
+        select * from announcement
+	</select>
+    <select id="findExistAnnouncement" resultType="com.Glory.po.Announcement">
+        select * from announcement where exist = 1
+    </select>
+    <insert id="sendAnnouncement" parameterType="com.Glory.po.Announcement">
+        insert into announcement (id, content, title,time, exist) values (#{id}, #{content}, #{title},#{time}, 1)
+    </insert>
+    <delete id="deleteAnnouncement" parameterType="Integer">
+        delete from announcement where id = #{id}
+    </delete>
+    <update id="hiddenAnnouncement" parameterType="Integer">
+        update announcement
+        set
+            exist = 0
+        where id = #{id}
+    </update>
+    <update id="showAnnouncement" parameterType="Integer">
+        update announcement
+        set
+            exist = 1
+        where id = #{id}
+    </update>
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--    &lt;!&ndash;设置日志使用log4f  &ndash;&gt;-->
+    <settings>
+        <setting name="logImpl" value="log4j"/>
+    </settings>
+    <!--    <typeAliases>-->
+    <!--    <package name="com.niit.entity"/>-->
+    <!--    </typeAliases>-->
+
+    <!--<environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis1?characterEncoding=utf8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="szc20030312"/>
+            </dataSource>
+        </environment>
+    </environments>-->
+
+ <!--   &lt;!&ndash;映射文件的设置 &ndash;&gt;
+    <mappers>
+        &lt;!&ndash; 使用类路径引入 &ndash;&gt;
+        <mapper resource="mapper/CustomerMapper.xml"/>
+        &lt;!&ndash; 使用命名空间引入 &ndash;&gt;
+    </mappers>-->
+</configuration>

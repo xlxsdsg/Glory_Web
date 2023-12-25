@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.navbar {
+    background-color: #343a40;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.logout-btn {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #0056b3;
+}

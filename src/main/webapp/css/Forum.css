@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:transparent;
+    background: url(/Glory_Web/image/ForumBackground.jpg) no-repeat;
+    background-size:100% 100%;
+}
+
+.container-fluid {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.list-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.table {
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 4px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.post-title, .announcement-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.post-info, .announcement-time {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+    padding-bottom: 10px;
+}
+.post-form {
+    margin-top: 20px;
+}
+
+.post-form input[type="text"],
+.post-form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.post-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.post-form input[type="submit"]:hover {
+    background-color: #45a049;
+}

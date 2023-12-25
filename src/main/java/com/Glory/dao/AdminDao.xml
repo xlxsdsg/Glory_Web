@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.Glory.dao.AdminDao">
+    <update id="frostUserByUserId" parameterType="Integer">
+        update userdata
+        set
+            status = 2
+        where userid = #{userId}
+    </update>
+    <update id="unfreezeUserByUserId" parameterType="Integer">
+        update userdata
+        set
+            status = 1
+        where userid = #{userId}
+    </update>
+    <select id="findAllUser" resultType="com.Glory.po.User">
+        select * from userdata where identity = 1
+	</select>
+    <delete id="deleteUserByUserId" parameterType="Integer">
+        delete from userdata where userid = #{userId}
+    </delete>
+    <update id="hiddenPostByRoot" parameterType="Integer">
+        update post
+        set
+            exist = 0
+        where postId = #{postId}
+    </update>
+    <delete id="deletePostByRoot" parameterType="Integer">
+        delete from post where postId = #{postId}
+    </delete>
+</mapper>

@@ -1,0 +1,42 @@
+.pic-div {
+    display: flex; /* 使用 Flex 布局 */
+    justify-content: center; /* 水平居中 */
+    width: 50%;
+    margin: 0 auto; /* 水平居中 */
+    height: 200px; /* 固定高度 */
+}
+.pic-div img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%; /* 添加圆角 */
+}
+
+.user-info {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+
+.user-info p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.comment-box {
+    width: 80%;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.comment-item {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.comment-info {
+    text-align: right;
+    font-size: 14px;
+}

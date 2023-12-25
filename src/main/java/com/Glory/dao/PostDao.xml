@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.Glory.dao.PostDao">
+    <insert id="sendPost" parameterType="com.Glory.po.Post">
+        insert into post (userid, content, exist, time, username, title) values (#{userId}, #{content}, #{exist}, #{time}, #{username}, #{title})
+    </insert>
+    <update id="editPost" parameterType="com.Glory.po.Post">
+        update post
+        SET
+            title = #{title},
+            content = #{content}
+            WHERE postId = #{postId}
+    </update>
+    <update id="deletePost" parameterType="Integer">
+        update post
+        set
+            exist = 0
+        where postId = #{postId}
+    </update>
+    <select id="findMyPost" parameterType="Integer" resultType="com.Glory.po.Post">
+        select * from post where exist = 1 and userId = #{userId}
+    </select>
+    <select id="findAllPost" resultType="com.Glory.po.Post">
+        select * from post where exist = 1
+    </select>
+    <select id="findAllPostEvenHidden" resultType="com.Glory.po.Post">
+        select * from post
+    </select>
+    <select id="findOnePost" parameterType="Integer" resultType="com.Glory.po.Post">
+        select * from post where exist = 1 and postId = #{postId}
+    </select>
+</mapper>

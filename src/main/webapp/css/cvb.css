@@ -1,0 +1,38 @@
+iframe{
+    width: 1200px;
+    margin: auto;
+   }
+   .all{
+    width: 100%;
+    height: 810px;
+    padding-bottom: 50px;
+    margin-top: -80px;
+    margin-bottom: 1px;
+   }
+   .all .content{
+    margin-top: 0px;
+    float: left;
+   }
+   .all iframe{
+    /* border: 2px solid red; */
+   }
+   #content{
+   /*  border: 1px solid red; */
+    width: 1200px;
+    margin-top: -80px;
+    /* margin: auto; */
+   }
+   .ct .p-img{
+    text-align: center;
+    margin-top: 7%;
+   }
+   .ct p{
+    margin: 6px 0;
+    text-indent: 2rem;
+   }
+   .ct .question_title{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+   }

@@ -1,0 +1,10 @@
+table {
+    border: none;
+    background-color: transparent;
+
+}
+body{
+    background-color:transparent;
+    background: url(/Glory_Web/image/AnnouceBackground.jpg) no-repeat;
+    background-size:100% 100%;
+}

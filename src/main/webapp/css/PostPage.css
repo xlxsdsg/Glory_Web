@@ -1,0 +1,39 @@
+body
+{
+    font-family: Arial, sans-serif; color: #333;
+}
+
+    .container
+    {
+        max-width: 800px; margin: 0 auto; padding: 20px;
+    }
+
+.post, .comment
+{
+    border: 1px solid #ddd; padding: 20px; margin-bottom: 20px;
+}
+
+.post-header, .post-content, .post-footer
+{
+    margin-bottom: 20px;
+}
+
+.comment-header, .comment-content
+{
+    margin-bottom: 10px;
+}
+
+input[type="text"]
+{
+    width: 70%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;
+}
+
+input[type="submit"]
+{
+    padding: 10px 20px; border: none; background-color: #007BFF; color: white; cursor: pointer;
+}
+
+input[type="submit"]:hover
+{
+    background-color: #0056b3;
+}
